@@ -15,4 +15,18 @@ describe("rotateMatrixClockwise", () => {
         const result = rotateMatrixCounterClockwise(input);
         expect(result).toEqual(expected);
     });
+
+    it("debe rotar correctamente una matriz de 3x3", () => {
+        const input = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+        ];
+        const expected = [
+            [3, 6, 9],
+            [2, 5, 8],
+            [1, 4, 7],
+        ];
+        expect(rotateMatrixCounterClockwise(input)).toEqual(expected);
+    });
 });
