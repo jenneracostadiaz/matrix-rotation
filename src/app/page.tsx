@@ -40,6 +40,31 @@ export default function HomePage() {
                     Pega una matriz en formato JSON (ej. `[[1,2],[3,4]]`) para
                     rotarla 90° en sentido anti-horario.
                 </p>
+
+                <form action={handleRotate}>
+                    <div className="flex flex-col items-start w-full">
+                        <label
+                            htmlFor="matrix-input"
+                            className="mb-2 font-medium"
+                        >
+                            Entrada de la Matriz (JSON):
+                        </label>
+                        <input
+                            id="matrix-input"
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                            className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600"
+                            placeholder="Ej: [[1, 2], [3, 4]]"
+                        />
+                    </div>
+
+                    <button
+                        type="submit"
+                        className="mt-4 w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+                    >
+                        Rotar Matriz
+                    </button>
+                </form>
             </div>
         </main>
     );
