@@ -29,4 +29,9 @@ describe("rotateMatrixClockwise", () => {
         ];
         expect(rotateMatrixCounterClockwise(input)).toEqual(expected);
     });
+
+    it("debe manejar una matriz de 1x1", () => {
+        const input = [[1]];
+        expect(rotateMatrixCounterClockwise(input)).toEqual([[1]]);
+    });
 });
