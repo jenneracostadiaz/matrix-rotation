@@ -66,6 +66,16 @@ export default function HomePage() {
                     </button>
                 </form>
             </div>
+
+            {error && (
+                <div
+                    role="alert"
+                    aria-live="assertive"
+                    className="mt-4 p-3 bg-red-100 dark:bg-red-900 border border-red-400 dark:border-red-700 text-red-700 dark:text-red-200 rounded-md w-full max-w-md"
+                >
+                    <strong>Error:</strong> {error}
+                </div>
+            )}
         </main>
     );
 }
