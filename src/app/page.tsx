@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { MatrixDisplay } from "@/app/_components/MatrixDisplay";
 import { type Matrix, rotateMatrixCounterClockwise } from "@/app/_lib/matrix";
 
 export default function HomePage() {
@@ -76,6 +77,21 @@ export default function HomePage() {
                     <strong>Error:</strong> {error}
                 </div>
             )}
+
+            <div className="w-full max-w-md flex flex-col md:flex-row md:space-x-8 mt-6">
+                {originalMatrix && (
+                    <MatrixDisplay
+                        matrix={originalMatrix}
+                        title="Matriz Original"
+                    />
+                )}
+                {rotatedMatrix && (
+                    <MatrixDisplay
+                        matrix={rotatedMatrix}
+                        title="Matriz Rotada (-90°)"
+                    />
+                )}
+            </div>
         </main>
     );
 }
