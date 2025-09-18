@@ -20,3 +20,26 @@ function validateMatrix(data: any): data is Matrix {
     }
     return true;
 }
+
+/**
+ * Rota una matriz NxN en 90 grados en sentido horario.
+ * @param matrix - La matriz NxN a rotar.
+ * @returns - Una nueva matriz rotada.
+ */
+export function rotateMatrixCounterClockwise(matrix: Matrix): Matrix {
+    validateMatrix(matrix);
+
+    const n = matrix.length;
+
+    const rotatedMatrix: Matrix = Array.from({ length: n }, () =>
+        Array(n).fill(0),
+    );
+
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            rotatedMatrix[n - 1 - j][i] = matrix[i][j];
+        }
+    }
+
+    return rotatedMatrix;
+}
