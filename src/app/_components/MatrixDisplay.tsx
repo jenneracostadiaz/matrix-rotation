@@ -11,15 +11,18 @@ export function MatrixDisplay({ matrix, title }: MatrixDisplayProps) {
     }
 
     return (
-        <section className="mt-6 w-full">
+        <section className="mt-6 w-full max-w-52 m-auto">
             <h2 className="font-semibold mb-2 text-center">{title}</h2>
-            <div className="p-4 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-600">
+            <div className="bg-gray-50 dark:bg-gray-800">
                 <table className="w-full text-center aspect-square">
                     <tbody>
                         {matrix.map((row, rowIndex) => (
                             <tr key={rowIndex}>
                                 {row.map((cell, cellIndex: number) => (
-                                    <td key={cellIndex} className="p-2 text-lg">
+                                    <td
+                                        key={cellIndex}
+                                        className="p-2 text-lg border border-gray-300 dark:border-gray-600"
+                                    >
                                         {cell}
                                     </td>
                                 ))}
