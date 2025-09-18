@@ -29,11 +29,11 @@ export const metadata: Metadata = {
         title: "Herramienta para Rotar Matrices",
         description:
             "Rota matrices NxN 90° en sentido anti-horario. Pega una matriz en formato JSON (ej. [[1,2],[3,4]]) para ver la matriz rotada.",
-        url: "https://matrix-rotator.vercel.app",
+        url: "https://matrix-rotation.vercel.app/",
         siteName: "Matrix Rotator",
         images: [
             {
-                url: "https://matrix-rotator.vercel.app/og-image.png",
+                url: "https://matrix-rotation.vercel.app/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Herramienta para Rotar Matrices",
