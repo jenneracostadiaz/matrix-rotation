@@ -34,4 +34,14 @@ describe("rotateMatrixClockwise", () => {
         const input = [[1]];
         expect(rotateMatrixCounterClockwise(input)).toEqual([[1]]);
     });
+
+    it("debe lanzar un error si la matriz no es cuadrada", () => {
+        const input = [
+            [1, 2],
+            [3, 4, 5],
+        ];
+        expect(() => rotateMatrixCounterClockwise(input)).toThrow(
+            "La matriz debe ser cuadrada (NxN).",
+        );
+    });
 });
